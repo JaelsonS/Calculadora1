@@ -70,7 +70,7 @@ main {
 
 .calculo-section input,
 .calculo-section select {
-    width: 100%;
+    width: 90%px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -79,7 +79,7 @@ main {
 }
 
 .calculo-section button {
-    width: 100%;
+    width: 500px;
     padding: 12px;
     background-color: #333;
     color: white;

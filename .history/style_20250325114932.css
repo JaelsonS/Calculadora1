@@ -79,7 +79,7 @@ main {
 }
 
 .calculo-section button {
-    width: 100%;
+    width: 100px;
     padding: 12px;
     background-color: #333;
     color: white;

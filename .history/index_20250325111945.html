@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Desconto e Juros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Desconto e Juros</h1>
+        <form id="calculator-form">
+            <label for="valor">Informe o valor:</label>
+            <input type="number" id="valor" placeholder="Valor inicial" required>
+
+            <label for="porcentagem">Informe a porcentagem:</label>
+            <input type="number" id="porcentagem" placeholder="Porcentagem" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div id="result" class="result">
+            <p id="desconto"></p>
+            <p id="juros"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

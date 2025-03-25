@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descontos e Juros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-menu">Início</a></li>
+                    <li><a href="#" id="historico-menu">Histórico</a></li>
+                    <li><a href="#desconto-section" id="desconto-menu">Desconto</a></li>
+                    <li><a href="#juros-section" id="juros-menu">Juros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="desconto-section" class="calculo-section">
+            <h2>Calculadora de Desconto</h2>
+            <label for="valor">Valor do Produto:</label>
+            <input type="number" id="valor" placeholder="Digite o valor">
+            <label for="porcentagem">Porcentagem de Desconto:</label>
+            <input type="number" id="porcentagem" placeholder="Digite a porcentagem">
+            <button id="calcular-desconto">Calcular Desconto</button>
+            <p id="resultado-desconto"></p>
+        </section>
+
+        <section id="juros-section" class="calculo-section">
+            <h2>Calculadora de Juros</h2>
+            <label for="valor-juros">Valor Inicial:</label>
+            <input type="number" id="valor-juros" placeholder="Digite o valor inicial">
+            <label for="juros-percent">Taxa de Juros (%):</label>
+            <input type="number" id="juros-percent" placeholder="Digite a taxa de juros">
+            <label for="tempo">Tempo (anos):</label>
+            <input type="number" id="tempo" placeholder="Digite o tempo">
+            <label for="tipo-juros">Tipo de Juros:</label>
+            <select id="tipo-juros">
+                <option value="simples">Juros Simples</option>
+                <option value="composto">Juros Compostos</option>
+            </select>
+            <button id="calcular-juros">Calcular Juros</button>
+            <p id="resultado-juros"></p>
+        </section>
+
+        <section id="historico" class="historico-section">
+            <h2>Histórico de Cálculos</h2>
+            <ul id="historico-lista">
+                <!-- Histórico de cálculos será exibido aqui -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Desenvolvido por Jaelson Santos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -13,7 +13,6 @@ document.getElementById('calcular-desconto').addEventListener('click', function(
     const resultado = `O valor com ${porcentagem}% de desconto é R$ ${valorDesconto.toFixed(2)}`;
     document.getElementById('resultado-desconto').textContent = resultado;
 
-    // Adiciona ao histórico
     addHistorico('Desconto', `R$ ${valor.toFixed(2)} - ${porcentagem}% -> R$ ${valorDesconto.toFixed(2)}`);
 });
 
@@ -38,11 +37,9 @@ document.getElementById('calcular-juros').addEventListener('click', function() {
     const resultado = `O valor final após ${tempo} anos é R$ ${valorFinal.toFixed(2)}`;
     document.getElementById('resultado-juros').textContent = resultado;
 
-    // Adiciona ao histórico
     addHistorico('Juros', `${tipoJuros} - R$ ${valorJuros.toFixed(2)} - ${taxaJuros}% - ${tempo} anos -> R$ ${valorFinal.toFixed(2)}`);
 });
 
-// Função para adicionar o cálculo ao histórico
 function addHistorico(tipo, resultado) {
     const historicoLista = document.getElementById('historico-lista');
     const li = document.createElement('li');
@@ -50,26 +47,22 @@ function addHistorico(tipo, resultado) {
     historicoLista.appendChild(li);
 }
 
-// Funcionalidade de navegação no menu
 document.getElementById('home-menu').addEventListener('click', () => {
-    window.scrollTo(0, 0); // Volta para o topo
+    window.scrollTo(0, 0); 
 });
 
 document.getElementById('historico-menu').addEventListener('click', () => {
     document.getElementById('historico').scrollIntoView({ behavior: 'smooth' });
 });
-// Função para mover para o próximo campo quando pressionado Enter
 function setFocusOnEnter(event, nextElementId) {
     if (event.key === "Enter") {
-        event.preventDefault(); // Impede a ação padrão do Enter
+        event.preventDefault(); 
         const nextElement = document.getElementById(nextElementId);
         if (nextElement) {
-            nextElement.focus(); // Define o foco no próximo elemento
-        }
+            nextElement.focus(); 
     }
 }
 
-// Adiciona o evento de pressionar Enter para os campos de entrada
 document.getElementById('valor').addEventListener('keydown', function(event) {
     setFocusOnEnter(event, 'porcentagem');
 });
